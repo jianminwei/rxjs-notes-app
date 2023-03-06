@@ -1,0 +1,21 @@
+<!-- /src/app/app.component.html -->
+<main>
+
+  <app-header></app-header>
+
+  <div class="container">
+    <div>
+      <app-note-form></app-note-form>
+    </div>
+
+    <div class="" id="notes-box">
+      <div class="text-center">
+        <div class="header text-center">
+          <div>
+            <app-note-list [notes]="notes"></app-note-list>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

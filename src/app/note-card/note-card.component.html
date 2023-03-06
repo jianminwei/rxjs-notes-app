@@ -1,0 +1,19 @@
+<div class="note-card">
+    <div class="card text-white bg-card mb-3">
+      <div class="card-header">
+        <button mat-icon-button style="color: darkred;" (click)="deleteNote(theNote.id)"
+         aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title note-title">{{
+          theNote.title
+          }}</h4>
+        <p class="card-text note-text"> {{
+          theNote.note
+          }}</p>
+      </div>
+    </div>
+  </div>
+  
