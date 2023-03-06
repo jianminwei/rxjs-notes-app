@@ -2,20 +2,20 @@ import {Subject} from 'rxjs';
 import {ActionTypes} from './actions';
 import {Note} from '../note-card/note-card.component';
 
-interface InitialState {
-  notes: Object[];
+interface State {
+  notes: Note[];
 }
 
-let state: InitialState = {
+let state: State = {
   notes: [],
 };
 
 interface Event {
   type: String;
-  payload: Object;
+  payload: Note;
 }
 
-export const store = new Subject<InitialState>();
+export const store = new Subject<State>();
 export const eventDispatcher = new Subject<Event>();
 
 eventDispatcher.subscribe((data: Event) => {

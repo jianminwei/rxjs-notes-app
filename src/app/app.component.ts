@@ -11,7 +11,7 @@ import {Note} from './note-card/note-card.component';
 })
 export class AppComponent implements OnInit{
 
-  notes:any[] = [];
+  notes:Note[] = [];
 
   constructor() {
     store.subscribe((state) => {
@@ -24,7 +24,11 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     eventDispatcher.next({
       type: ActionTypes.GET_NOTES,
-      payload: this.notes
+
+       //Note: for ActionTypes.GET_NOTES event, it doesn't need a payload.
+       //      So here pass a empty payload.
+       //      The purpose here is to just trigger retrieving all the notes.
+      payload:  {id: "", title: "", note: "" } 
     });
   }
 
