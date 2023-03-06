@@ -1,8 +1,8 @@
-# MaterialDemo
+## Managing State Using RxJS Subjects in Angular Applications
 
 This project was originally from below link:
 https://www.telerik.com/blogs/managing-state-using-rxjs-subjects-in-angular-applications
 
 
-## Jianmin refactored the code with newer version of Angular and TypeScript.
+### Modified the original RxJs code to use more Types instead of Object. And added Notes Count to the header. 
 
