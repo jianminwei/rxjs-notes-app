@@ -1,6 +1,6 @@
 import {Subject} from 'rxjs';
 import {ActionTypes} from './actions';
-import {Note} from '../note-card/note-card.component';
+import {Note} from '../store/note';
 
 interface State {
   notes: Note[];

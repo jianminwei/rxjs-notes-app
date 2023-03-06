@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { v4} from 'uuid';
-import { Note } from '../note-card/note-card.component';
+import { v4 } from 'uuid';
+import { Note } from '../store/note';
+import { emptyNote } from '../store/note';
 import { eventDispatcher } from '../store';
 import { ActionTypes } from '../store/actions';
 
@@ -14,11 +15,7 @@ export class NoteFormComponent implements OnInit {
   constructor() {
   }
 
-  note: Note = {
-    id: '',
-    title: '',
-    note: ''
-  };
+  note: Note = emptyNote;
 
   step = 1;
 

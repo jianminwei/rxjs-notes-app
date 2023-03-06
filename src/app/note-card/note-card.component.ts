@@ -1,18 +1,15 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {eventDispatcher} from '../store';
 import {ActionTypes} from '../store/actions';
+import {Note} from '../store/note';
 
-export interface Note {
-  id: string;
-  title: string;
-  note: string;
-}
 
 @Component({
   selector: 'app-note-card',
   templateUrl: './note-card.component.html',
   styleUrls: ['./note-card.component.css']
 })
+
 export class NoteCardComponent implements OnInit {
   @Input() theNote!: Note;
 

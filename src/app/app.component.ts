@@ -1,8 +1,8 @@
 import { Component, OnInit  } from '@angular/core';
 import {eventDispatcher, store} from './store';
 import {ActionTypes} from './store/actions';
-import {Note} from './note-card/note-card.component';
-
+import {Note} from './store/note';
+import { emptyNote } from './store/note';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,6 @@ export class AppComponent implements OnInit{
     });
   }
 
-
   ngOnInit() {
     eventDispatcher.next({
       type: ActionTypes.GET_NOTES,
@@ -28,7 +27,7 @@ export class AppComponent implements OnInit{
        //Note: for ActionTypes.GET_NOTES event, it doesn't need a payload.
        //      So here pass a empty payload.
        //      The purpose here is to just trigger retrieving all the notes.
-      payload:  {id: "", title: "", note: "" } 
+      payload: emptyNote 
     });
   }
 
